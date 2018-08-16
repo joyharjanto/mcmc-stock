@@ -1,6 +1,6 @@
 # mcmc-stock
 
-An analysis on some of the biggest tech stocks: Amazon (AMZN), Facebook (FB), Tesla (TSLA), Apple (AAPL) and Google (GOOGL)
+An analysis on some of the biggest tech stocks using R: Amazon (AMZN), Facebook (FB), Tesla (TSLA), Apple (AAPL) and Google (GOOGL)
 
 resources:
 https://plotly-book.cpsievert.me/scatter-traces.html
