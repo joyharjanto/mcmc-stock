@@ -1,0 +1,8 @@
+Used plotly to create a visualization of each stock's risk v reward. 
+Risk: standard deviation of log returns
+Reward: mean of log returns
+
+xlab<-list(title="Reward", titlefont=f)
+ylab<-list(title="Risk", titlefont=f)
+
+plot_ly(x=graphic1[,1],y=graphic1[,2],text=rownames(graphic1),type='scatter',mode="markers",marker=list(color=c("black","blue","red","grey","green")))%>%layout(title="Risk v Reward",xaxis=xlab,yaxis=ylab)
