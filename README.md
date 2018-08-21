@@ -1,6 +1,26 @@
 # mcmc-stock
 
-An analysis on some of the biggest tech stocks using R: Amazon (AMZN), Facebook (FB), Tesla (TSLA), Apple (AAPL) and Google (GOOGL)
+A technical analysis on some of the biggest tech stocks using R: Amazon (AMZN), Facebook (FB), Tesla (TSLA), Apple (AAPL) and Google (GOOGL) & a price simulation using random walk and monte carlo. 
+
+how to read repo:
+
+library- packages I used to complete the project
+
+logreturn- log return of stocks from 2008-2018
+
+plotlyvisual- a visualization using plotly. a stock's risk vs avg return
+
+chartseries- stock's latest movement, bollinger band, % change in bollinger, volume traded, moving average convergence divergence
+
+return- stock distribution's daily return
+
+correlation- correlation between the stocks
+
+randomwalk- used to predict stock prices. ggplot used
+
+montecarlo- used to replicate the random walk experiment to come up with a more accurate simulation. ggplot used
+
+
 
 references: 
 
