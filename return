@@ -1,0 +1,34 @@
+#Average stock daily return
+
+
+probs<-c(0.005,0.025,0.25,0.5,0.75,0.975,0.995)
+
+AMZN_dist<-AMZN_log_returns%>%quantile(probs=probs,na.rm=TRUE)
+AMZN_mean<-mean(AMZN_log_returns,na.rm=TRUE)
+AMZN_sd<-sd(AMZN_log_returns,na.rm=TRUE)
+
+AMZN_mean%>%exp() # 1.001271
+
+FB_dist<-FB_log_returns%>%quantile(probs=probs,na.rm=TRUE)
+FB_mean<-mean(FB_log_returns,na.rm=TRUE)
+FB_sd<-sd(FB_log_returns,na.rm=TRUE)
+
+FB_mean%>%exp() # 1.000963
+
+TSLA_dist<-TSLA_log_returns%>%quantile(probs=probs,na.rm=TRUE)
+TSLA_mean<-mean(TSLA_log_returns,na.rm=TRUE)
+TSLA_sd<-sd(TSLA_log_returns,na.rm=TRUE)
+
+TSLA_mean%>%exp() # 1.001244
+
+AAPL_dist<-AAPL_log_returns%>%quantile(probs=probs,na.rm=TRUE)
+AAPL_mean<-mean(AAPL_log_returns,na.rm=TRUE)
+AAPL_sd<-sd(AAPL_log_returns,na.rm=TRUE)
+
+AAPL_mean%>%exp() # 1.001057
+
+GOOGL_dist<-GOOGL_log_returns%>%quantile(probs=probs,na.rm=TRUE)
+GOOGL_mean<-mean(GOOGL_log_returns,na.rm=TRUE)
+GOOGL_sd<-sd(GOOGL_log_returns,na.rm=TRUE)
+
+GOOGL_mean%>%exp() # 1.000651
