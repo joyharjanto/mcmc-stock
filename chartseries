@@ -1,0 +1,17 @@
+#Use R to observe a stock's performance
+#chart components: bollinger bands, % bollinger change, volume, moving average convergence divergence
+
+AMZN%>%Ad()%>%chartSeries()
+AMZN%>%chartSeries(TA='addBBands();addBBands(draw="p");addVo();addMACD()',subset='2018')
+
+FB%>%Ad()%>%chartSeries()
+FB%>%chartSeries(TA='addBBands();addBBands(draw="p");addVo();addMACD()',subset='2018')
+
+TSLA%>%Ad()%>%chartSeries()
+TSLA%>%chartSeries(TA='addBBands();addBBands(draw="p");addVo();addMACD()',subset='2018')
+
+AAPL%>%Ad()%>%chartSeries()
+AAPL%>%chartSeries(TA='addBBands();addBBands(draw="p");addVo();addMACD()',subset='2018')
+
+GOOGL%>%Ad()%>%chartSeries()
+GOOGL%>%chartSeries(TA='addBBands();addBBands(draw="p");addVo();addMACD()',subset='2018')
