@@ -1,0 +1,52 @@
+#Loads the company stock using ticker
+
+getSymbols("AMZN",from="2008-08-01",to="2018-08-20")
+getSymbols("FB",from="2008-08-01",to="2018-08-20")
+getSymbols("TSLA",from="2008-08-01",to="2018-08-20")
+getSymbols("AAPL",from="2008-08-01",to="2018-08-20")
+getSymbols("GOOGL",from="2008-08-01",to="2018-08-20")
+
+#Stock returns in log
+
+AMZN_log_returns<-AMZN%>%Ad()%>%dailyReturn(type='log')
+FB_log_returns<-FB%>%Ad()%>%dailyReturn(type='log')
+TSLA_log_returns<-TSLA%>%Ad()%>%dailyReturn(type='log')
+AAPL_log_returns<-AAPL%>%Ad()%>%dailyReturn(type='log')
+GOOGL_log_returns<-GOOGL%>%Ad()%>%dailyReturn(type='log')
+
+#Mean of log stock returns 
+
+AMZN_mean_log<-mean(AMZN_log_returns)
+FB_mean_log<-mean(FB_log_returns)
+TSLA_mean_log<-mean(TSLA_log_returns)
+AAPL_mean_log<-mean(AAPL_log_returns)
+GOOGL_mean_log<-mean(GOOGL_log_returns)
+
+#round it to 4 decimal places
+
+mean_log<-c(AMZN_mean_log,FB_mean_log,TSLA_mean_log,AAPL_mean_log,GOOGL_mean_log)
+mean_log<-round(mean_log,4)
+
+#standard deviation of log stock returns
+
+AMZN_sd_log<-sd(AMZN_log_returns)
+FB_sd_log<-sd(FB_log_returns)
+TSLA_sd_log<-sd(TSLA_log_returns)
+AAPL_sd_log<-sd(AAPL_log_returns)
+GOOGL_sd_Log<-sd(GOOGL_log_returns)
+
+#round it to 4 decimal places 
+
+sd_log<-c(AMZN_sd_log,FB_sd_log,TSLA_sd_log,AAPL_sd_log,GOOGL_sd_Log)
+sd_log<-round(sd_log,4)
+
+#create data frame
+
+graphic1<-data.frame(rbind(c("AMZN",AMZN_mean_log,AMZN_sd_log),c("FB",FB_mean_log,FB_sd_log),c("TSLA",TSLA_mean_log,TSLA_sd_log),c("AAPL",AAPL_mean_log,AAPL_sd_log),c("GOOGL",GOOGL_mean_log,GOOGL_sd_Log)),stringsAsFactors = FALSE)
+
+
+graphic1<-data.frame(mean_log,sd_log)
+rownames(graphic1)<-c("AMZN","FB","TSLA","AAPL","GOOGL")
+colnames(graphic1)<-c("Mean_Log_Return", "Sd_Log_Return")
+
+Data frame contains the 4 companies with each company's average log return and standard deviation.
